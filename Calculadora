@@ -1,0 +1,78 @@
+from tkinter import * #o *imorta toda biblioteca
+from tkinter import ttk # importa interface grafica
+
+#Definição de cores
+cor1 = "#1e1f1e"
+cor2 = "#feffff"
+cor3 = "#38576b"
+cor4 = "#ECEFF1"
+cor5 = "#FFAB40"
+
+janela = Tk() # "cria" a janela
+janela.title("Calculadora") #titulo janela
+janela.geometry("235x318") #tamanho da tela
+janela.config(bg=cor1) #configuracao de tela, cor de fundo
+
+#criando frames
+frame_tela = Frame(janela, width=235, height=50, bg=cor3) #separa uma parte da janela, largura, altura e cor de fundo(bg=cor1)
+frame_tela.grid(row=0, column=0) #usa o grid para dividir
+
+frame_corpo = Frame(janela, width=235, height=368) #separa uma parte da janela, largura, altura e cor de fundo(bg=cor1)
+frame_corpo.grid(row=1, column=0) #usa o grid para dividir
+
+#criando botoes
+b1 = Button(frame_corpo, text="C", width=11, height=2, bg=cor4, font=("Ivy 13 bold"), relief=RAISED, overrelief=RIDGE) #relief "puxa o botao um pouco para frente", overrelief como vai se apresentar com o mouse em cima
+b1.place(x=0, y=0) #place divisão melhor que grid PARA ESSE CASO 
+
+b2 = Button(frame_corpo, text="%", width=5, height=2, bg=cor4, font=("Ivy 13 bold"), relief=RAISED, overrelief=RIDGE)
+b2.place(x=119, y=0)
+
+b3 = Button(frame_corpo, text="/", width=5, height=2, bg=cor5, fg=cor2, font=("Ivy 13 bold"), relief=RAISED, overrelief=RIDGE) #fg é a cor do texto
+b3.place(x=177, y=0)
+
+b4 = Button(frame_corpo, text="7", width=5, height=2, bg=cor4, font=("Ivy 13 bold"), relief=RAISED, overrelief=RIDGE) 
+b4.place(x=0, y=53)
+
+b5 = Button(frame_corpo, text="8", width=5, height=2, bg=cor4, font=("Ivy 13 bold"), relief=RAISED, overrelief=RIDGE) 
+b5.place(x=59, y=53)
+
+b6 = Button(frame_corpo, text="9", width=5, height=2, bg=cor4, font=("Ivy 13 bold"), relief=RAISED, overrelief=RIDGE) 
+b6.place(x=119, y=53)
+
+b7 = Button(frame_corpo, text="*", width=5, height=2, bg=cor5, fg=cor2, font=("Ivy 13 bold"), relief=RAISED, overrelief=RIDGE) 
+b7.place(x=177, y=53)
+
+b4 = Button(frame_corpo, text="4", width=5, height=2, bg=cor4, font=("Ivy 13 bold"), relief=RAISED, overrelief=RIDGE) 
+b4.place(x=0, y=108)
+
+b5 = Button(frame_corpo, text="5", width=5, height=2, bg=cor4, font=("Ivy 13 bold"), relief=RAISED, overrelief=RIDGE) 
+b5.place(x=59, y=108)
+
+b6 = Button(frame_corpo, text="6", width=5, height=2, bg=cor4, font=("Ivy 13 bold"), relief=RAISED, overrelief=RIDGE) 
+b6.place(x=119, y=108)
+
+b7 = Button(frame_corpo, text="-", width=5, height=2, bg=cor5, fg=cor2, font=("Ivy 13 bold"), relief=RAISED, overrelief=RIDGE) 
+b7.place(x=177, y=108)
+
+b4 = Button(frame_corpo, text="1", width=5, height=2, bg=cor4, font=("Ivy 13 bold"), relief=RAISED, overrelief=RIDGE) 
+b4.place(x=0, y=162)
+
+b5 = Button(frame_corpo, text="2", width=5, height=2, bg=cor4, font=("Ivy 13 bold"), relief=RAISED, overrelief=RIDGE) 
+b5.place(x=59, y=162)
+
+b6 = Button(frame_corpo, text="3", width=5, height=2, bg=cor4, font=("Ivy 13 bold"), relief=RAISED, overrelief=RIDGE) 
+b6.place(x=119, y=162)
+
+b7 = Button(frame_corpo, text="+", width=5, height=2, bg=cor5, fg=cor2, font=("Ivy 13 bold"), relief=RAISED, overrelief=RIDGE)
+b7.place(x=177, y=162)
+
+b8 = Button(frame_corpo, text="0", width=11, height=2, font=("Ivy 13 bold"), relief=RAISED, overrelief=RIDGE)
+b8.place(x=0, y=216) 
+
+b9 = Button(frame_corpo, text=".", width=5, height=2, font=("Ivy 13 bold"), relief=RAISED, overrelief=RIDGE)
+b9.place(x=119, y=216)
+
+b10 = Button(frame_corpo, text="=", width=5, height=2, bg=cor5, fg=cor2, font=("Ivy 13 bold"), relief=RAISED, overrelief=RIDGE) 
+b10.place(x=177, y=216)
+
+janela.mainloop() # chama a janela
